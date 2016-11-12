@@ -46,10 +46,17 @@
   </dependencies>
   <build>
     <plugins>
-      <plugin>
-        <groupId>com.google.appengine</groupId>
+	<plugin>
+        <groupId>com.google.cloud.tools</groupId>
         <artifactId>appengine-maven-plugin</artifactId>
-        <version>1.9.44</version>
+        <version>${appengine.maven.plugin}</version>
+        <configuration>
+          <!-- deploy configuration -->
+<!--
+          <deploy.promote>true</deploy.promote>                           <!~~ DEFAULT value ~~>
+          <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>   <!~~ DEFAULT value ~~>
+ -->
+        </configuration>
       </plugin>
       <plugin>
         <groupId>com.google.appengine</groupId>
