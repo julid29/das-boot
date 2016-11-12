@@ -5,7 +5,7 @@
   <groupId>com.boot</groupId>
   <artifactId>das-boot</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>	
+  <packaging>war</packaging>	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -13,10 +13,14 @@
 	</parent>
   <name>das-boot</name>
   <url>http://maven.apache.org</url> 
-<properties> 
- <maven.compiler.target>1.7</maven.compiler.target>
- <maven.compiler.source>1.7</maven.compiler.source>
-</properties> 
+<properties>
+    <maven.compiler.source>1.8</maven.compiler.source> <!-- REQUIRED -->
+    <maven.compiler.target>1.8</maven.compiler.target> <!-- REQUIRED -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <failOnMissingWebXml>false</failOnMissingWebXml> <!-- REQUIRED -->
+    <appengine.maven.plugin>1.0.0</appengine.maven.plugin>
+    <jetty.maven.plugin>9.3.7.v20160115</jetty.maven.plugin>
+  </properties>
   <dependencies>
   	<dependency>
   		<groupId>org.springframework.boot</groupId>
